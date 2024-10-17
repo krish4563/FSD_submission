@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pune Feedback Form</title>
+    <link rel="stylesheet" href="5th.css">
+    <style>
+        a:link, a:visited {
+ background-color: #f44336;
+ color: white;
+ padding: 14px 25px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+}
+
+a:hover, a:active {
+ background-color: red;
+}
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Pune Feedback Form</h1>
+    </header>
+
+    <form id="feedback-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="contact">Contact:</label>
+        <input type="tel" id="contact" name="contact" required>
+        
+        <label for="days">No. of days to stay:</label>
+        <input type="number" id="days" name="days" required>
+        
+        <label for="reason">Reason for coming to Pune:</label>
+        <select id="reason" name="reason" required>
+            <option value="education">Education</option>
+            <option value="travel">Travel</option>
+            <option value="job">Job</option>
+        </select>
+        
+        <label>Came to Pune before:</label>
+        <div class="radio-group">
+            <input type="radio" id="before-yes" name="before" value="yes" required>
+            <label for="before-yes">Yes</label>
+            <input type="radio" id="before-no" name="before" value="no" required>
+            <label for="before-no">No</label>
+        </div>
+        
+        <label for="experience">Define your experience in Pune (50/100 words):</label>
+        <textarea id="experience" name="experience" rows="4" required></textarea>
+        
+        <label>Was our website helpful:</label>
+        <div class="radio-group">
+            <input type="radio" id="helpful-very" name="helpful" value="very" required>
+            <label for="helpful-very">Very Much</label>
+            <input type="radio" id="helpful-kindof" name="helpful" value="kindof" required>
+            <label for="helpful-kindof">Kind of</label>
+            <input type="radio" id="helpful-notmuch" name="helpful" value="notmuch" required>
+            <label for="helpful-notmuch">Not Much</label>
+            <input type="radio" id="helpful-notatall" name="helpful" value="notatall" required>
+            <label for="helpful-notatall">Not at All</label>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Feedback submitted successfully!');
+            this.reset();
+        });
+    </script>
+    <a href="intro.html">Back to Home PAGE</a>
+</body>
+</html>
