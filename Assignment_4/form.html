@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form action="insert.php" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required><br>
+
+        <label for="roll_no">Roll No/ID:</label>
+        <input type="text" name="roll_no" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" name="confirm_password" required><br>
+
+        <label for="contact_no">Contact Number:</label>
+        <input type="text" name="contact_no" required><br>
+
+        <input type="submit" name="submit" value="Register">
+    </form>
+
+    <h2>Update Student Contact</h2>
+    <form action="insert.php" method="POST">
+        <label for="roll_no_update">Roll No/ID:</label>
+        <input type="text" name="roll_no_update" required><br>
+
+        <label for="contact_no_update">New Contact Number:</label>
+        <input type="text" name="contact_no_update" required><br>
+
+        <input type="submit" name="update" value="Update">
+    </form>
+
+    <h2>Delete Student Record</h2>
+    <form action="insert.php" method="POST">
+        <label for="roll_no_delete">Roll No/ID:</label>
+        <input type="text" name="roll_no_delete" required><br>
+        <input type="submit" name="delete" value="Delete">
+    </form>
+
+    <h2>View Students Records</h2>
+    <form action="insert.php" method="POST">
+        <input type="submit" name="view" value="View All Students">
+    </form>
+</body>
+</html>
